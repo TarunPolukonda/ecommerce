@@ -551,4 +551,5 @@ def viewcontactus():
     data=cursor.fetchall()
     cursor.close()
     return render_template('viewcontactus.html',data=data)
-app.run(debug=True,use_reloader=True)
+if __name__=='__main__':
+    app.run()
