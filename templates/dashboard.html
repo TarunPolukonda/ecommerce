@@ -84,7 +84,7 @@
                             <option value="10">10</option>
                          </select>
                          </form>
-                          <a href="" class="btn btn-warning" id="update">Buy Now</a>
+                          <a href="{{url_for('pay',itemid=i,name=items[i][0],price=items[i][1])}}" class="btn btn-warning" id="update">Buy Now</a>
                           <a href="{{url_for('addcart',itemid=items_data[0],name=items_data[1],category=items_data[4],price=items_data[3],image=items_data[5],quantity=items_data[3],category=i[6])}}" class="btn btn-success">Add To Cart</a>
                         </div>
                       </div>
