@@ -4,7 +4,7 @@ import mysql.connector
 from otp import genotp
 from cmail import sendmail
 from stoken import token,dtoken
-import os,re,pdfkit
+import os,re
 import razorpay
 app=Flask(__name__)
 app.config['SESSION_TYPE']='filesystem'
@@ -13,7 +13,7 @@ RAZORPAY_KEY_ID='rzp_test_c6m46TaGhi7qx3'
 RAZORPAY_KEY_SECRET='fARQS1WX4v942Z4ayClkzUSZ'
 client=razorpay.Client(auth=(RAZORPAY_KEY_ID,RAZORPAY_KEY_SECRET))
 # mydb=mysql.connector.connect(host='localhost',username='root',password='root',db='ecomm')
-user=os.environ.get('RDF_USERNAME')
+user=os.environ.get('RDS_USERNAME')
 db=os.environ.get('RDS_DB_NAME')
 password=os.environ.get('RDS_PASSWORD')
 host=os.environ .get('RDS_HOSTNAME')
