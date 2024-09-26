@@ -224,7 +224,7 @@ def additem():
 def adminlogout():
     if session.get('email'):
         session.pop('email')
-        return redirect(url_for('adminlogin'))
+        return redirect(url_for('adminpanel'))
     else:
         return redirect(url_for('adminlogin'))
 @app.route('/viewall_items')
@@ -512,7 +512,7 @@ def remove(itemid):
 def userlogout():
     if session.get('uemail'):
         session.pop('uemail')
-        return redirect(url_for('userlogin'))
+        return redirect(url_for('index'))
     return redirect(url_for('userlogin'))
 @app.route('/pay/<itemid>/<name>/<float:price>',methods=['GET','POST'])
 def pay(itemid,name,price):
