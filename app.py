@@ -385,7 +385,7 @@ def userverify(var1):
     return render_template('otp.html')
 @app.route('/userlogin',methods=['GET','POST'])
 def userlogin():
-    if session.get('uemail'):
+    if not session.get('uemail'):
         return redirect(url_for('panel'))
     else:
         if request.method=='POST':
