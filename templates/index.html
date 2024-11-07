@@ -234,7 +234,7 @@
           
           <a href="{{url_for('addcart',itemid=i[0],name=i[1],price=i[3],image=i[2],quantity=i[6],category=i[5])}}"
             class="btn btn-primary">Add To Cart</a>
-          <a href="{{url_for('pay',itemid=i,name=items[i][0],price=items[i][1])}}" class="btn btn-warning">Buy Now</a>
+          <a href="{{url_for('pay',itemid=i,name=i[0],price=i[1])}}" class="btn btn-warning">Buy Now</a>
         </div>
       </div>
     </div>
